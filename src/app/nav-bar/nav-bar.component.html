@@ -2,11 +2,12 @@
   <mat-sidenav
     #drawer
     class="sidenav"
-    fixedInViewport="true"
+    [ngClass]="{hidden: !(isHandset | async)!.matches}"
+    fixedInViewport="false"
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
     [opened]="!(isHandset | async)!.matches">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-toolbar color="primary">Leansoft</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Link 1</a>
       <a mat-list-item href="#">Link 2</a>
@@ -15,6 +16,14 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
+      <span>Leansoft</span>
+      <span class="spacer"></span>
+      <span class="nav-bar-menu"
+        *ngIf="!(isHandset | async)!.matches">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </span>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -23,7 +32,6 @@
         *ngIf="(isHandset | async)!.matches">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Application Title</span>
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>
