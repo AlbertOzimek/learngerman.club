@@ -8,21 +8,14 @@
     [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
     [opened]="!(isHandset | async)!.matches">
     <mat-toolbar color="primary">Leansoft</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
-    </mat-nav-list>
+    <nav-bar-menu></nav-bar-menu>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <span>Leansoft</span>
       <span class="spacer"></span>
-      <span class="nav-bar-menu"
-        *ngIf="!(isHandset | async)!.matches">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+      <span class="nav-bar-menu">
+         <nav-bar-menu *ngIf="!(isHandset | async)!.matches" toolbar="true"></nav-bar-menu>
       </span>
       <button
         type="button"
