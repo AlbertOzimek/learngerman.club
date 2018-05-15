@@ -14,9 +14,7 @@
     <mat-toolbar color="primary">
       <span>Leansoft</span>
       <span class="spacer"></span>
-      <span class="nav-bar-menu">
-         <nav-bar-menu *ngIf="!(isHandset | async)!.matches" toolbar="true"></nav-bar-menu>
-      </span>
+      <nav-bar-menu *ngIf="!(isHandset | async)!.matches" toolbar="true"></nav-bar-menu>
       <button
         type="button"
         aria-label="Toggle sidenav"
