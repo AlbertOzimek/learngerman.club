@@ -8,12 +8,20 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { NavBarMenuComponent } from './nav-bar/nav-bar-menu/nav-bar-menu.component';
+import { HomeComponent } from './views/home/home.component';
+import { TechnologiesComponent } from './views/technologies/technologies.component';
+import { AboutComponent } from './views/about/about.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    NavBarMenuComponent
+    NavBarMenuComponent,
+    HomeComponent,
+    TechnologiesComponent,
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
