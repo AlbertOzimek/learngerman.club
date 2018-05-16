@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -12,6 +10,8 @@ import { HomeComponent } from './views/home/home.component';
 import { TechnologiesComponent } from './views/technologies/technologies.component';
 import { AboutComponent } from './views/about/about.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import {routes} from './views/routes';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
