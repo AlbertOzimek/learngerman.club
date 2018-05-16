@@ -8,7 +8,7 @@
     [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
     [opened]="!(isHandset | async)!.matches">
     <mat-toolbar color="primary">Leansoft</mat-toolbar>
-    <nav-bar-menu></nav-bar-menu>
+    <nav-bar-menu (click)="drawer.toggle()"></nav-bar-menu>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
