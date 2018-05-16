@@ -12,6 +12,8 @@ import { AboutComponent } from './views/about/about.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import {routes} from './views/routes';
 import {RouterModule} from '@angular/router';
+import { MethodologyComponent } from './views/methodology/methodology.component';
+import { ProductsComponent } from './views/products/products.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {RouterModule} from '@angular/router';
     HomeComponent,
     TechnologiesComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MethodologyComponent,
+    ProductsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
