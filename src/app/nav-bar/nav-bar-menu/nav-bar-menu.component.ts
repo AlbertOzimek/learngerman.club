@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'nav-bar-menu',
@@ -8,7 +8,8 @@ import {Component, Input, OnInit} from "@angular/core";
 export class NavBarMenuComponent implements OnInit {
   @Input() toolbar;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
