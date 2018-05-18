@@ -19,6 +19,10 @@ describe('ProductsComponent', () => {
     fixture.detectChanges();
   });
 
+  it('should 0 = 0', function () {
+    expect(0).toBe(1);
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
