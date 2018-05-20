@@ -26,6 +26,7 @@ jobs:
           path: test-results.xml
           prefix: tests
       - run: yarn lint
+      - run: yarn  ng e2e
 deployment:
   production:
     branch: master
