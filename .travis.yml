@@ -25,13 +25,13 @@ before_script:
 script:
   - ng test --watch=false
   - ng lint
+  - ng e2e
   - ng build --prod
 
 after_script:
   - dpl --provider=firebase --token=${FIREBASE_TOKEN}
 
 after_success:
-  - firebase login
   - firebase deploy --token $FIREBASE_TOKEN
 
 notifications:
