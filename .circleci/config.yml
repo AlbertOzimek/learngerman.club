@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:stable
+      - image: circleci/node:8.11.1-browser
     steps:
       - checkout
       - attach_workspace:
