@@ -24,6 +24,7 @@ before_script:
 
 script:
   - ng test --watch=false
+  - ng lint
   - ng build --prod
 
 after_script:
@@ -37,5 +38,5 @@ notifications:
   recipients:
     - albert.ozimek@gmail.com
   email:
-    on_failure: always
-    on_success: always
+    on_failure: change
+    on_success: change

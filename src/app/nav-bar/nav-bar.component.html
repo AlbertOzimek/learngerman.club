@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <span>Leansoft</span>
   <span class="spacer"></span>
-  <nav-bar-menu *ngIf="!(isHandset | async)!.matches" toolbar="true"></nav-bar-menu>
+  <leansoft-nav-bar-menu *ngIf="!(isHandset | async)!.matches" toolbar="true"></leansoft-nav-bar-menu>
   <button
     type="button"
     aria-label="Toggle sidenav"
@@ -21,7 +21,7 @@
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
     [opened]="!(isHandset | async)!.matches">
-    <nav-bar-menu (click)="drawer.toggle()"></nav-bar-menu>
+    <leansoft-nav-bar-menu (click)="drawer.toggle()"></leansoft-nav-bar-menu>
   </mat-sidenav>
   <mat-sidenav-content>
     <ng-content></ng-content>
