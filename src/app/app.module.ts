@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import { NavBarMenuComponent } from './nav-bar/nav-bar-menu/nav-bar-menu.component';
-import { HomeComponent } from './views/home/home.component';
-import { TechnologiesComponent } from './views/technologies/technologies.component';
-import { AboutComponent } from './views/about/about.component';
-import { NotFoundComponent } from './views/not-found/not-found.component';
-import {routes} from './views/routes';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NavBarComponent} from './nav-bar/nav-bar.component';
+import {LayoutModule} from '@angular/cdk/layout';
+import {MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule} from '@angular/material';
+import {NavBarMenuComponent} from './nav-bar/nav-bar-menu/nav-bar-menu.component';
+import {HomeComponent} from './views/home/home.component';
+import {TechnologiesComponent} from './views/technologies/technologies.component';
+import {AboutComponent} from './views/about/about.component';
+import {NotFoundComponent} from './views/not-found/not-found.component';
+import {routes} from './routes';
 import {RouterModule} from '@angular/router';
-import { MethodologyComponent } from './views/methodology/methodology.component';
-import { ProductsComponent } from './views/products/products.component';
+import {MethodologyComponent} from './views/methodology/methodology.component';
+import {ProductsComponent} from './views/products/products.component';
 
 @NgModule({
   declarations: [
@@ -41,4 +41,5 @@ import { ProductsComponent } from './views/products/products.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
