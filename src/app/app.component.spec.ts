@@ -13,7 +13,6 @@ import {MethodologyComponent} from './views/methodology/methodology.component';
 import {ProductsComponent} from './views/products/products.component';
 import {HomeComponent} from './views/home/home.component';
 import {NotFoundComponent} from './views/not-found/not-found.component';
-import {LearngermanComponent} from './views/products/learngerman/learngerman.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -37,8 +36,7 @@ describe('AppComponent', () => {
         AboutComponent,
         NotFoundComponent,
         MethodologyComponent,
-        ProductsComponent,
-        LearngermanComponent
+        ProductsComponent
       ],
     }).compileComponents();
   }));

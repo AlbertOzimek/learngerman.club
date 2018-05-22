@@ -5,7 +5,6 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {Routes} from '@angular/router';
 import {MethodologyComponent} from './methodology/methodology.component';
 import {ProductsComponent} from './products/products.component';
-import {LearngermanComponent} from './products/learngerman/learngerman.component';
 
 export const routes: Routes = [
   {
@@ -19,10 +18,6 @@ export const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent
-  },
-  {
-    path: 'products/learngerman',
-    component: LearngermanComponent
   },
   {
     path: 'technologies',

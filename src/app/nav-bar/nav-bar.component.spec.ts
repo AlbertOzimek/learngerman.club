@@ -4,12 +4,9 @@ import {NavBarComponent} from './nav-bar.component';
 import {NavBarMenuComponent} from './nav-bar-menu/nav-bar-menu.component';
 import {MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {routes} from '../views/routes';
 import {TechnologiesComponent} from '../views/technologies/technologies.component';
-import {RouterModule} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
 import {HomeComponent} from '../views/home/home.component';
-import {LearngermanComponent} from '../views/products/learngerman/learngerman.component';
 import {AppComponent} from '../app.component';
 import {AboutComponent} from '../views/about/about.component';
 import {MethodologyComponent} from '../views/methodology/methodology.component';
@@ -33,8 +30,7 @@ describe('NavBarComponent', () => {
         AboutComponent,
         NotFoundComponent,
         MethodologyComponent,
-        ProductsComponent,
-        LearngermanComponent
+        ProductsComponent
       ],
       imports: [
         RouterTestingModule,
