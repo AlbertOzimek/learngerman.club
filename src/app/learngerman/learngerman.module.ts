@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {LearngermanComponent} from './learngerman.component';
 import {RouterModule, Routes} from '@angular/router';
+import { TranslateComponent } from './translate/translate.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ],
   declarations: [
-    LearngermanComponent
+    LearngermanComponent,
+    TranslateComponent
   ]
 })
 export class LearngermanModule { }
