@@ -1,9 +1,36 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {AngularFirestore} from 'angularfire2/firestore';
+import {AngularFirestoreCollection} from 'angularfire2/firestore/collection/collection';
+
+/*@Injectable()
+export class TranslateService {
+
+  constructor(private db: AngularFirestore) {
+  }
+
+  createTranslation(text: string): AngularFirestoreCollection<any> {
+    return this.db.collection(`translations`);
+  }
+}*/
+
+
+@Injectable()
+export class TranslateService {
+
+  constructor() {
+  }
+
+
+  createTranslation(text: string): string {
+    return 'message from translate service';
+  }
+}
+
+/*
+
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TranslateService {
 
   constructor(private db: AngularFireDatabase) { }
@@ -19,3 +46,4 @@ export class TranslateService {
     return this.db.list<any>(`translations/${key}`);
   }
 }
+*/

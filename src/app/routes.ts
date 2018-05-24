@@ -9,7 +9,7 @@ import {ProductsComponent} from './views/products/products.component';
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    loadChildren: './learngerman/learngerman.module#LearngermanModule' // HomeComponent
   },
   {
     path: 'learngerman',
