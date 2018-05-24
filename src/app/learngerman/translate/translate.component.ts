@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TranslateService} from './translate.service';
 
 @Component({
   selector: 'leansoft-translate',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TranslateComponent implements OnInit {
 
-  constructor() { }
+  userText: string;
+  currentTranslation;
+
+  constructor(private translateService: TranslateService) {
+  }
 
   ngOnInit() {
   }
 
+  handleTranslation() {
+    this.currentTranslation = this.translateService.createTranslation(this.userText);
+  }
+
+  defaultMessage() {
+    if (!this.currentTranslation) {
+      return 'Enter text and click run translation';
+    } else {
+      return 'Running translation in the cloud...';
+    }
+  }
 }
