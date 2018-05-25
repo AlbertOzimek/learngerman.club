@@ -29,7 +29,8 @@ export class TranslationsManagementComponent implements OnInit {
   }
 
   addPost() {
-    this.afs.collection('posts').add({'title': this.title, 'content': this.content});
+    // this.afs.collection('posts').add({'title': this.title, 'content': this.content});
+    this.afs.collection('posts').doc('leansoft').set({'title': this.title, 'content': this.content});
   }
 
 }
