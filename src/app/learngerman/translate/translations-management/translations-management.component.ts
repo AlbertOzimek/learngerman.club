@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
 import {Observable} from 'rxjs';
 
@@ -17,12 +17,19 @@ export class TranslationsManagementComponent implements OnInit {
   postsCol: AngularFirestoreCollection<Post>;
   posts: Observable<Post[]>;
 
+  title: string;
+  content: string;
+
   constructor(private afs: AngularFirestore) {
   }
 
   ngOnInit() {
     this.postsCol = this.afs.collection('posts');
     this.posts = this.postsCol.valueChanges();
+  }
+
+  addPost() {
+    this.afs.collection('posts').add({'title': this.title, 'content': this.content});
   }
 
 }
