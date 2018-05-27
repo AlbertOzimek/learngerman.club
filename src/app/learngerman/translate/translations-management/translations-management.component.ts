@@ -3,8 +3,9 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} 
 import {Observable} from 'rxjs';
 
 interface Post {
-  title: string;
-  content: string;
+  en: string;
+  de: string;
+  pl: string;
 }
 
 @Component({
@@ -17,20 +18,21 @@ export class TranslationsManagementComponent implements OnInit {
   postsCol: AngularFirestoreCollection<Post>;
   posts: Observable<Post[]>;
 
-  title: string;
-  content: string;
+  english: string;
+  german: string;
+  polish: string;
 
   constructor(private afs: AngularFirestore) {
   }
 
   ngOnInit() {
-    this.postsCol = this.afs.collection('posts');
+    this.postsCol = this.afs.collection('translations');
     this.posts = this.postsCol.valueChanges();
   }
 
   addPost() {
-    // this.afs.collection('posts').add({'title': this.title, 'content': this.content});
-    this.afs.collection('posts').doc('leansoft').set({'title': this.title, 'content': this.content});
+    this.afs.collection('translations').add({'en': this.english, 'de': this.german, 'pl': this.polish});
+    // this.afs.collection('translations').doc('leansoft').set({'en': this.english, 'de': this.german});
   }
 
 }

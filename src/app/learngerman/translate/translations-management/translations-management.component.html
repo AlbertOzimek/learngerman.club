@@ -1,12 +1,15 @@
 <div class="translations-management">
-  <input type="text" [(ngModel)]="title" name="title" placeholder="Title..">
-  <textarea [(ngModel)]="content" name="content" placeholder="Content.."></textarea>
+  <input type="text" [(ngModel)]="english" name="english" placeholder="English.."/>
+  <input [(ngModel)]="german" name="german" placeholder="German.."/>
+  <input type="text" [(ngModel)]="polish" name="polish" placeholder="Polish.."/>
   <input type="submit" value="Add a Post" (click)="addPost()">
   <ul *ngFor="let post of posts | async">
     <li>
-      <strong>{{ post.title}}</strong>
+      English: {{ post.en}}
       <br>
-      {{post.content}}
+      German: {{post.de}}
+      <br>
+      Polish: {{post.pl}}
     </li>
   </ul>
 </div>
