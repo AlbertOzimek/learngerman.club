@@ -7,7 +7,14 @@ import {TranslateService} from './translate/translate.service';
 import {TranslationsManagementComponent} from './translate/translations-management/translations-management.component';
 
 const routes: Routes = [
-  {path: '', component: LearngermanComponent}
+  {
+    path: '',
+    component: LearngermanComponent
+  },
+  {
+    path: 'translations-management',
+    component: TranslationsManagementComponent
+  }
 ];
 
 import {AngularFireModule} from 'angularfire2';

@@ -3,16 +3,21 @@
 </textarea>
 <button (click)="handleTranslation()" class="button is-primary">Run Translation</button>
 
-<h3>French</h3>
+<h3>English</h3>
 
 {{ (currentTranslation | async)?.fr || defaultMessage() }}
 
-<h3>Spanish</h3>
+<h3>Polish</h3>
 
 {{ (currentTranslation | async)?.es || defaultMessage() }}
 
-<h3>Arabic</h3>
 
-{{ (currentTranslation | async)?.ar || defaultMessage() }}
-
-<leansoft-translations-management></leansoft-translations-management>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a mat-list-item routerLink="translations-management">Translations Management</a>
