@@ -12,6 +12,10 @@ const routes: Routes = [
     component: LearngermanComponent
   },
   {
+    path: 'translate',
+    component: TranslateComponent
+  },
+  {
     path: 'translations-management',
     component: TranslationsManagementComponent
   }
