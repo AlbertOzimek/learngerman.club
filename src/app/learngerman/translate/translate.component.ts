@@ -10,11 +10,17 @@ export class TranslateComponent implements OnInit {
 
   userText: string;
   currentTranslation;
+  translatedText;
+
 
   constructor(private translateService: TranslateService) {
   }
 
   ngOnInit() {
+  }
+
+  translate() {
+    this.translatedText = this.translateService.translate(this.userText);
   }
 
   handleTranslation() {

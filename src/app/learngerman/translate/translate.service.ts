@@ -11,5 +11,9 @@ export class TranslateService {
     const data = { 'english': text };
     // this.afs.collection('/translations').add(data);
   }
+
+  translate(text: string): string {
+    return 'Text: ' + text + ' will be translated here';
+  }
 }
 
