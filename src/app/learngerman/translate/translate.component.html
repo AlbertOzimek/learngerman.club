@@ -1,4 +1,8 @@
-<h1>Translate Your Text</h1>
+<mat-toolbar>
+  <span>Translate</span>
+  <span class="fill-remaining-space"></span>
+  <span><a mat-list-item routerLink="translations-management"><mat-icon>settings</mat-icon></a></span>
+</mat-toolbar>
 <textarea  rows="8" cols="40" class="input" [(ngModel)]="userText">
 </textarea>
 <button (click)="handleTranslation()" class="button is-primary">Run Translation</button>
@@ -11,13 +15,3 @@
 
 {{ (currentTranslation | async)?.es || defaultMessage() }}
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<a mat-list-item routerLink="translations-management">Translations Management</a>

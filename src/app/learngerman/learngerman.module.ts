@@ -20,6 +20,7 @@ const routes: Routes = [
 import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {FormsModule} from '@angular/forms';
+import {MatIconModule, MatToolbarModule} from '@angular/material';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDATNKWDLv3yMoYaDUTLh_qLeC_AOC0k5I',
@@ -37,6 +38,8 @@ export const firebaseConfig = {
     RouterModule.forChild(routes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
+    MatToolbarModule,
+    MatIconModule,
     FormsModule
   ],
   declarations: [
