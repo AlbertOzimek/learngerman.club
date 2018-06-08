@@ -24,7 +24,7 @@ const routes: Routes = [
 import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {FormsModule} from '@angular/forms';
-import {MatIconModule, MatToolbarModule} from '@angular/material';
+import {MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import { TranslateToolbarComponent } from './translate/translate-toolbar/translate-toolbar.component';
 
 export const firebaseConfig = {
@@ -45,6 +45,7 @@ export const firebaseConfig = {
     AngularFirestoreModule,
     MatToolbarModule,
     MatIconModule,
+    MatCardModule,
     FormsModule
   ],
   declarations: [

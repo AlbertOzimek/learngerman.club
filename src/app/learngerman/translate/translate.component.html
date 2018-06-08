@@ -1,13 +1,12 @@
 <leansoft-translate-toolbar></leansoft-translate-toolbar>
-<textarea  rows="8" cols="40" class="input" [(ngModel)]="userText">
-</textarea>
-<button (click)="handleTranslation()" class="button is-primary">Run Translation</button>
-
-<h3>English</h3>
-
-{{ (currentTranslation | async)?.fr || defaultMessage() }}
-
-<h3>Polish</h3>
-
-{{ (currentTranslation | async)?.es || defaultMessage() }}
+<mat-card>
+  <mat-card-content>
+     <textarea  rows="8" cols="40" class="input" [(ngModel)]="userText"></textarea>
+    <button (click)="handleTranslation()" class="button is-primary">Run Translation</button>
+    <h3>English</h3>
+    {{ (currentTranslation | async)?.fr || defaultMessage() }}
+    <h3>Polish</h3>
+    {{ (currentTranslation | async)?.es || defaultMessage() }}
+  </mat-card-content>
+</mat-card>
 
