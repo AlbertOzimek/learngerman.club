@@ -21,6 +21,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {FormsModule} from '@angular/forms';
 import {MatIconModule, MatToolbarModule} from '@angular/material';
+import { TranslateToolbarComponent } from './translate/translate-toolbar/translate-toolbar.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDATNKWDLv3yMoYaDUTLh_qLeC_AOC0k5I',
@@ -45,7 +46,8 @@ export const firebaseConfig = {
   declarations: [
     LearngermanComponent,
     TranslateComponent,
-    TranslationsManagementComponent
+    TranslationsManagementComponent,
+    TranslateToolbarComponent
   ]
 })
 export class LearngermanModule {
