@@ -1,15 +1,12 @@
 <leansoft-translate-toolbar></leansoft-translate-toolbar>
 <mat-card>
   <mat-card-content>
-     <textarea  rows="8" cols="40" class="input" [(ngModel)]="userText"></textarea>
-     <button (click)="translate()" class="button is-primary">Translation</button>
-     <div *ngIf="translatedTextEnglish">
-       <h3>English</h3>
-       {{translatedTextEnglish}}
-     </div>
-    <div *ngIf="translatedTextPolish">
-      <h3>Polish</h3>
-      {{translatedTextPolish}}
+    <textarea rows="8" cols="40" class="input" [(ngModel)]="userText"></textarea>
+    <button (click)="translate()" class="button is-primary">Translation</button>
+    <div>
+          <span *ngFor="let translation of translationArray">
+            <h3>{{translation.translatedText}}</h3>
+          </span>
     </div>
   </mat-card-content>
 </mat-card>

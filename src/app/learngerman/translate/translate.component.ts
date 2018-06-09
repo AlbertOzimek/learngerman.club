@@ -8,6 +8,11 @@ interface TranslationObject {
   };
 }
 
+interface Translation {
+  languageKey,
+  translatedText;
+}
+
 @Component({
   selector: 'leansoft-translate',
   templateUrl: './translate.component.html',
@@ -16,22 +21,28 @@ interface TranslationObject {
 export class TranslateComponent implements OnInit {
 
   userText: string;
-  translatedTextEnglish: string;
-  translatedTextPolish: string;
   targetLanguages: Array<string> = ['en', 'pl'];
+  translationArray: Array<Translation>;
 
 
   constructor(private translateService: TranslateService) {
+    this.translationArray = new Array();
   }
 
   ngOnInit() {
   }
 
   translate() {
-    this.translateService.translate(this.userText, this.targetLanguages)
+    for (const targetLanguage of this.targetLanguages) {
+      this.getTranslation(targetLanguage);
+    }
+  }
+
+  getTranslation(targetLanguage: string) {
+    this.translateService.translate(this.userText, targetLanguage)
       .pipe(map((translationObject: TranslationObject) => translationObject.data.translations[0].translatedText))
       .subscribe((translatedText: string) => {
-        this.translatedTextEnglish = translatedText;
+        this.translationArray.push({languageKey: targetLanguage, translatedText: translatedText});
       });
   }
 }
