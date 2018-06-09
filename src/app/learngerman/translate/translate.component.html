@@ -3,12 +3,15 @@
   <mat-card-content>
      <textarea  rows="8" cols="40" class="input" [(ngModel)]="userText"></textarea>
      <button (click)="translate()" class="button is-primary">Translation</button>
-     <button (click)="handleTranslation()" class="button is-primary">Create Translation</button>
-     <h3>English</h3>
-     {{ (currentTranslation | async)?.fr || defaultMessage() }}
-     <h3>Polish</h3>
-     {{ (currentTranslation | async)?.es || defaultMessage() }}
+     <div *ngIf="translatedTextEnglish">
+       <h3>English</h3>
+       {{translatedTextEnglish}}
+     </div>
+    <div *ngIf="translatedTextPolish">
+      <h3>Polish</h3>
+      {{translatedTextPolish}}
+    </div>
   </mat-card-content>
 </mat-card>
-{{translatedText}}
+
 

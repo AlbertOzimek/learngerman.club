@@ -1,19 +1,21 @@
 import {Injectable} from '@angular/core';
-import {AngularFirestore} from 'angularfire2/firestore';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {firebaseConfig} from '../firebase-config';
 
 @Injectable()
 export class TranslateService {
 
-  constructor(private afs: AngularFirestore) { }
+  private readonly translateApiUrl: string;
 
-
-  createTranslation(text: string) {
-    const data = { 'english': text };
-    // this.afs.collection('/translations').add(data);
+  constructor(private httpClient: HttpClient) {
+    this.translateApiUrl = `https://www.googleapis.com/language/translate/v2?key=${firebaseConfig.apiKey}`;
   }
 
-  translate(text: string): string {
-    return 'Text: ' + text + ' will be translated here';
+  translate(text: string): Observable<Object> {
+    const queryUrl = '&source=de&target=en&q=' + text;
+    const url = this.translateApiUrl + queryUrl;
+    return this.httpClient.get(url);
   }
 }
 

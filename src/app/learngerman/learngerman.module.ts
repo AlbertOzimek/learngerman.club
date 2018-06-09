@@ -5,6 +5,13 @@ import {RouterModule, Routes} from '@angular/router';
 import {TranslateComponent} from './translate/translate.component';
 import {TranslateService} from './translate/translate.service';
 import {TranslationsManagementComponent} from './translate/translations-management/translations-management.component';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
+import {FormsModule} from '@angular/forms';
+import {MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import { TranslateToolbarComponent } from './translate/translate-toolbar/translate-toolbar.component';
+import {HttpClientModule} from '@angular/common/http';
+import {firebaseConfig} from './firebase-config';
 
 const routes: Routes = [
   {
@@ -21,21 +28,6 @@ const routes: Routes = [
   }
 ];
 
-import {AngularFireModule} from 'angularfire2';
-import {AngularFirestoreModule} from 'angularfire2/firestore';
-import {FormsModule} from '@angular/forms';
-import {MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
-import { TranslateToolbarComponent } from './translate/translate-toolbar/translate-toolbar.component';
-
-export const firebaseConfig = {
-  apiKey: 'AIzaSyDATNKWDLv3yMoYaDUTLh_qLeC_AOC0k5I',
-  authDomain: 'leansoft-266b9.firebaseapp.com',
-  databaseURL: 'https://leansoft-266b9.firebaseio.com',
-  projectId: 'leansoft-266b9',
-  storageBucket: 'leansoft-266b9.appspot.com',
-  messagingSenderId: '651638382911'
-};
-
 @NgModule({
   providers: [TranslateService],
   imports: [
@@ -46,6 +38,7 @@ export const firebaseConfig = {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    HttpClientModule,
     FormsModule
   ],
   declarations: [

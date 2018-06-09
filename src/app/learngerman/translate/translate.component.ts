@@ -1,5 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from './translate.service';
+import { map } from 'rxjs/operators';
+interface TranslationObject {
+  data: {
+    translations;
+  };
+}
 
 @Component({
   selector: 'leansoft-translate',
@@ -9,8 +15,8 @@ import {TranslateService} from './translate.service';
 export class TranslateComponent implements OnInit {
 
   userText: string;
-  currentTranslation;
-  translatedText;
+  translatedTextEnglish: string;
+  translatedTextPolish: string;
 
 
   constructor(private translateService: TranslateService) {
@@ -20,18 +26,10 @@ export class TranslateComponent implements OnInit {
   }
 
   translate() {
-    this.translatedText = this.translateService.translate(this.userText);
-  }
-
-  handleTranslation() {
-    this.currentTranslation = this.translateService.createTranslation(this.userText);
-  }
-
-  defaultMessage() {
-    if (!this.currentTranslation) {
-      return 'Enter text and click run translation';
-    } else {
-      return 'Running translation in the cloud...';
-    }
+    this.translateService.translate(this.userText)
+      .pipe(map((translationObject: TranslationObject) => translationObject.data.translations[0].translatedText))
+      .subscribe((translatedText: string) => {
+        this.translatedTextEnglish = translatedText;
+      });
   }
 }
