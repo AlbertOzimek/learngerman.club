@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from './translate.service';
-import { map } from 'rxjs/operators';
+import {map} from 'rxjs/operators';
+
 interface TranslationObject {
   data: {
     translations;
@@ -17,6 +18,7 @@ export class TranslateComponent implements OnInit {
   userText: string;
   translatedTextEnglish: string;
   translatedTextPolish: string;
+  targetLanguages: Array<string> = ['en', 'pl'];
 
 
   constructor(private translateService: TranslateService) {
@@ -26,7 +28,7 @@ export class TranslateComponent implements OnInit {
   }
 
   translate() {
-    this.translateService.translate(this.userText)
+    this.translateService.translate(this.userText, this.targetLanguages)
       .pipe(map((translationObject: TranslationObject) => translationObject.data.translations[0].translatedText))
       .subscribe((translatedText: string) => {
         this.translatedTextEnglish = translatedText;
