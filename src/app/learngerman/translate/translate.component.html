@@ -1,13 +1,19 @@
 <leansoft-translate-toolbar></leansoft-translate-toolbar>
 <mat-card>
   <mat-card-content>
-    <textarea rows="8" cols="40" class="input" [(ngModel)]="userText" (keyup)="translate($event)"></textarea>
-    <div>
+    <div fxLayout="column">
+      <div><button mat-raised-button>German</button></div>
+      <div fxFlexOffset="5px"></div>
+      <div fxLayout="row">
+          <textarea rows="8" cols="40" class="input" [(ngModel)]="userText" (keyup)="translate($event)"></textarea>
+        <div fxFlexOffset="20px"></div>
+        <div>
           <span *ngFor="let translation of translationArray">
             <h3>{{translation.translatedText}}</h3>
           </span>
+        </div>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>
-
 
