@@ -31,15 +31,15 @@ export class TranslateComponent implements OnInit {
   ngOnInit() {
   }
 
-  translate() {
+  translate($event) {
     for (const targetLanguage of this.targetLanguages) {
-      this.getTranslation(targetLanguage);
+      this.getTranslation(targetLanguage, $event.target.value);
     }
   }
 
-  getTranslation(targetLanguage: string) {
+  getTranslation(targetLanguage: string, text: string) {
     this.translationArray = new Array();
-    this.translateService.translate(this.userText, targetLanguage)
+    this.translateService.translate(text, targetLanguage)
       .pipe(map((translationObject: TranslationObject) => translationObject.data.translations[0].translatedText))
       .subscribe((translatedText: string) => {
         this.translationArray.push({languageKey: targetLanguage, translatedText: translatedText});
