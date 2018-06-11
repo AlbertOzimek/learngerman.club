@@ -26,7 +26,6 @@ export class TranslateComponent implements OnInit {
 
 
   constructor(private translateService: TranslateService) {
-    this.translationArray = new Array();
   }
 
   ngOnInit() {
@@ -39,6 +38,7 @@ export class TranslateComponent implements OnInit {
   }
 
   getTranslation(targetLanguage: string) {
+    this.translationArray = new Array();
     this.translateService.translate(this.userText, targetLanguage)
       .pipe(map((translationObject: TranslationObject) => translationObject.data.translations[0].translatedText))
       .subscribe((translatedText: string) => {
