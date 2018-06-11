@@ -1,10 +1,9 @@
-import {AboutComponent} from './views/about/about.component';
 import {TechnologiesComponent} from './views/technologies/technologies.component';
-import {HomeComponent} from './views/home/home.component';
 import {NotFoundComponent} from './views/not-found/not-found.component';
 import {Routes} from '@angular/router';
 import {MethodologyComponent} from './views/methodology/methodology.component';
 import {ProductsComponent} from './views/products/products.component';
+import {ContactComponent} from './views/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -28,8 +27,8 @@ export const routes: Routes = [
     component: TechnologiesComponent
   },
   {
-    path: 'about',
-    component: AboutComponent
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: '**',
