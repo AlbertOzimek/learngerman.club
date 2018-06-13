@@ -4,14 +4,15 @@ import {Routes} from '@angular/router';
 import {MethodologyComponent} from './views/methodology/methodology.component';
 import {ProductsComponent} from './views/products/products.component';
 import {ContactComponent} from './views/contact/contact.component';
+import {HomeComponent} from './views/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: './learngerman/learngerman.module#LearngermanModule' // HomeComponent
+    component: HomeComponent
   },
   {
-    path: 'learngerman',
+    path: 'learn-german',
     loadChildren: './learngerman/learngerman.module#LearngermanModule'
   },
   {
