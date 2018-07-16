@@ -8,11 +8,12 @@ import {TranslationsManagementComponent} from './translate/translations-manageme
 import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {FormsModule} from '@angular/forms';
-import {MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatTableModule, MatToolbarModule} from '@angular/material';
 import { TranslateToolbarComponent } from './translate/translate-toolbar/translate-toolbar.component';
 import {HttpClientModule} from '@angular/common/http';
 import {firebaseConfig} from './firebase-config';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { AdjectiveDeklinationComponent } from './grammar/deklination/adjective/adjective-deklination/adjective-deklination.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
     AngularFirestoreModule,
     MatToolbarModule,
     MatIconModule,
+    MatTableModule,
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
@@ -48,7 +50,8 @@ const routes: Routes = [
     LearngermanComponent,
     TranslateComponent,
     TranslationsManagementComponent,
-    TranslateToolbarComponent
+    TranslateToolbarComponent,
+    AdjectiveDeklinationComponent
   ]
 })
 export class LearngermanModule {
