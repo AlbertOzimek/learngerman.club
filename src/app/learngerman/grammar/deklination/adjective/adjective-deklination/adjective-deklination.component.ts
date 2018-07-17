@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 
-const ELEMENT_DATA: any[] = [
+const DEFINITE_ARTIKLE_DATA: any[] = [
   {case: 'Nominativ', maskulin: 'der rote Stein', feminin: 'das helle Light', neutral: 'die klare Luft', plural: 'die runden Formen'},
   {case: 'Akkusativ', maskulin: 'den roten Stein', feminin: 'das helle Light', neutral: 'die klare Luft', plural: 'die runden Formen'},
   {case: 'Dativ', maskulin: 'dem roten Stein', feminin: 'dem hellen Light', neutral: 'der klaren Luft', plural: 'den runden Formen'},
@@ -16,7 +16,7 @@ const ELEMENT_DATA: any[] = [
 })
 export class AdjectiveDeklinationComponent implements OnInit {
   displayedColumns: string[] = ['case', 'maskulin', 'feminin', 'neutral', 'plural'];
-  dataSource = ELEMENT_DATA;
+  dataSource = DEFINITE_ARTIKLE_DATA;
   constructor() { }
 
   ngOnInit() {
