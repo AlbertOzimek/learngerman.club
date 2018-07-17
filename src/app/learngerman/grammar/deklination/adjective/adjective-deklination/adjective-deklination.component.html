@@ -1,6 +1,14 @@
-<h2>Die Adjectivdeklination mit dem</h2>
-<h3 ng-click="">bestimmten Artikel</h3>
-<a><h3 (click)="loadUndefiniteArtikleData()">unbestimmten Artikel</h3>
+<h4>Die Adjectivdeklination mit dem
+<mat-form-field>
+  <mat-select [(value)]="selected">
+    <mat-option *ngFor="let artikleType of artikleTypes"
+                [value]="artikleType"
+                (click)="changeArticleType(artikleType.value)">
+      {{artikleType.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</h4>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="case">
     <th mat-header-cell *matHeaderCellDef></th>

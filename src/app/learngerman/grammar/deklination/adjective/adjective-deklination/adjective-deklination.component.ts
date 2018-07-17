@@ -21,6 +21,12 @@ const INDEFINITE_ARTIKLE_DATA: any[] = [
   },
 ];
 
+export interface ArtikleType {
+  value: string;
+  viewValue: string;
+}
+
+
 @Component({
   selector: 'leansoft-adjective-deklination',
   templateUrl: './adjective-deklination.component.html',
@@ -28,13 +34,31 @@ const INDEFINITE_ARTIKLE_DATA: any[] = [
 })
 export class AdjectiveDeklinationComponent implements OnInit {
   displayedColumns: string[] = ['case', 'maskulin', 'feminin', 'neutral', 'plural'];
+  artikleTypes: ArtikleType[] = [
+    {value: 'definite', viewValue: 'bestimmten Artikel'},
+    {value: 'indefinite', viewValue: 'unbestimmten Artikel'},
+    {value: 'null', viewValue: 'ohne Artikel'}
+  ];
   dataSource = DEFINITE_ARTIKLE_DATA;
+  selected;
+
 
   constructor() {
+    this.selected = this.artikleTypes[0];
   }
 
-  loadUndefiniteArtikleData() {
+  changeArticleType(articleType: any) {
     this.dataSource = INDEFINITE_ARTIKLE_DATA;
+    switch (articleType) {
+      case 'definite':
+        this.dataSource = DEFINITE_ARTIKLE_DATA;
+        break;
+      case 'indefinite':
+        this.dataSource = INDEFINITE_ARTIKLE_DATA;
+        break;
+      default:
+        this.dataSource = DEFINITE_ARTIKLE_DATA;
+    }
   }
 
   ngOnInit() {
