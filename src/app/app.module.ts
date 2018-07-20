@@ -6,7 +6,6 @@ import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule} from '@angular/material';
 import {NavBarMenuComponent} from './nav-bar/nav-bar-menu/nav-bar-menu.component';
-import {HomeComponent} from './views/home/home.component';
 import {NotFoundComponent} from './views/not-found/not-found.component';
 import {routes} from './routes';
 import {RouterModule} from '@angular/router';
@@ -18,7 +17,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     AppComponent,
     NavBarComponent,
     NavBarMenuComponent,
-    HomeComponent,
     NotFoundComponent,
     ContactComponent
   ],
