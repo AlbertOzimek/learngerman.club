@@ -6,7 +6,7 @@ const translate = Translate({keyFilename: "service-account-credentials.json"});
 const Encoding = Speech.v1.types.RecognitionConfig.AudioEncoding;
 
 // import * as functions from 'firebase-functions';
-// https://us-central1-leansoft-266b9.cloudfunctions.net/translateText
+// https://us-central1-learngerman-266b9.cloudfunctions.net/translateText
 export const translateText = functions.https.onRequest((request, response) => {
   const apiKey = 'AIzaSyDATNKWDLv3yMoYaDUTLh_qLeC_AOC0k5I';
   const lang = 'de';

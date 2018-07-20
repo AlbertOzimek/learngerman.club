@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'leansoft-methodology',
+  selector: 'learngerman-methodology',
   templateUrl: './methodology.component.html',
   styleUrls: ['./methodology.component.scss']
 })

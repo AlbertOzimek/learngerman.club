@@ -32,7 +32,7 @@ after_script:
   - dpl --provider=firebase --token=${FIREBASE_TOKEN}
 
 after_success:
-  - firebase deploy --project leansoft-266b9 --token $FIREBASE_TOKEN
+  - firebase deploy --project learngerman-266b9 --token $FIREBASE_TOKEN
 
 notifications:
   recipients:

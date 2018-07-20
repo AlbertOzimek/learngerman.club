@@ -14,7 +14,7 @@ interface Translation {
 }
 
 @Component({
-  selector: 'leansoft-translate',
+  selector: 'learngerman-translate',
   templateUrl: './translate.component.html',
   styleUrls: ['./translate.component.scss']
 })

@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "leansoft": {
+    "learngerman": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "leansoft",
+      "prefix": "learngerman",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/leansoft",
+            "outputPath": "dist/learngerman",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "leansoft:build"
+            "browserTarget": "learngerman:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "leansoft:build:production"
+              "browserTarget": "learngerman:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "leansoft:build"
+            "browserTarget": "learngerman:build"
           }
         },
         "test": {
@@ -105,7 +105,7 @@
         }
       }
     },
-    "leansoft-e2e": {
+    "learngerman-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -113,7 +113,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "leansoft:serve"
+            "devServerTarget": "learngerman:serve"
           }
         },
         "lint": {
@@ -128,5 +128,5 @@
       }
     }
   },
-  "defaultProject": "leansoft"
+  "defaultProject": "learngerman"
 }

@@ -28,7 +28,7 @@ export interface ArtikleType {
 
 
 @Component({
-  selector: 'leansoft-adjective-deklination',
+  selector: 'learngerman-adjective-deklination',
   templateUrl: './adjective-deklination.component.html',
   styleUrls: ['./adjective-deklination.component.scss']
 })

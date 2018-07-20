@@ -9,7 +9,7 @@ interface Post {
 }
 
 @Component({
-  selector: 'leansoft-translations-management',
+  selector: 'learngerman-translations-management',
   templateUrl: './translations-management.component.html',
   styleUrls: ['./translations-management.component.scss']
 })
@@ -32,7 +32,7 @@ export class TranslationsManagementComponent implements OnInit {
 
   addPost() {
     this.afs.collection('translations').add({'en': this.english, 'de': this.german, 'pl': this.polish});
-    // this.afs.collection('translations').doc('leansoft').set({'en': this.english, 'de': this.german});
+    // this.afs.collection('translations').doc('learngerman').set({'en': this.english, 'de': this.german});
   }
 
 }

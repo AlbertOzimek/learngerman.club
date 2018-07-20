@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'leansoft-translate-toolbar',
+  selector: 'learngerman-translate-toolbar',
   templateUrl: './translate-toolbar.component.html',
   styleUrls: ['./translate-toolbar.component.scss']
 })

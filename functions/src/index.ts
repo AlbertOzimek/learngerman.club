@@ -6,13 +6,13 @@ admin.initializeApp(functions.config().firebase);
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
 
-// https://us-central1-leansoft-266b9.cloudfunctions.net/helloWorld
+// https://us-central1-learngerman-266b9.cloudfunctions.net/helloWorld
 export const helloWorld = functions.https.onRequest((request, response) => {
   response.send('Hello from Firebase!');
 });
 
 
-// https://us-central1-leansoft-266b9.cloudfunctions.net/insertIntoDB?text=dog
+// https://us-central1-learngerman-266b9.cloudfunctions.net/insertIntoDB?text=dog
 exports.insertIntoDB = functions.https.onRequest((request, response) => {
   console.log('BBBBBBBBBBB - called insertIntoDB');
   const text = request.query.text;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'leansoft-technologies',
+  selector: 'learngerman-technologies',
   templateUrl: './technologies.component.html',
   styleUrls: ['./technologies.component.scss']
 })

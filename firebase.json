@@ -10,7 +10,7 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "dist/leansoft",
+    "public": "dist/learngerman",
     "ignore": [
       "firebase.json",
       "**/.*",

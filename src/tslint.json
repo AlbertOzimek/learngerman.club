@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "leansoft",
+            "learngerman",
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "leansoft",
+            "learngerman",
             "kebab-case"
         ]
     }

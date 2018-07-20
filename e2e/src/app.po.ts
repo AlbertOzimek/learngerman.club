@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('leansoft-root h1')).getText();
+    return element(by.css('learngerman-root h1')).getText();
   }
 }
