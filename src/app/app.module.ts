@@ -7,12 +7,9 @@ import {LayoutModule} from '@angular/cdk/layout';
 import {MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule} from '@angular/material';
 import {NavBarMenuComponent} from './nav-bar/nav-bar-menu/nav-bar-menu.component';
 import {HomeComponent} from './views/home/home.component';
-import {TechnologiesComponent} from './views/technologies/technologies.component';
 import {NotFoundComponent} from './views/not-found/not-found.component';
 import {routes} from './routes';
 import {RouterModule} from '@angular/router';
-import {MethodologyComponent} from './views/methodology/methodology.component';
-import {ProductsComponent} from './views/products/products.component';
 import { ContactComponent } from './views/contact/contact.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -22,10 +19,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     NavBarComponent,
     NavBarMenuComponent,
     HomeComponent,
-    TechnologiesComponent,
     NotFoundComponent,
-    MethodologyComponent,
-    ProductsComponent,
     ContactComponent
   ],
   imports: [

@@ -14,11 +14,13 @@ import {HttpClientModule} from '@angular/common/http';
 import {firebaseConfig} from './firebase-config';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { AdjectiveDeklinationComponent } from './grammar/deklination/adjective/adjective-deklination/adjective-deklination.component';
+import { GrammarComponent } from './grammar/grammar.component';
+import { ArticleComponent } from './grammar/article/article.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LearngermanComponent
+    component: GrammarComponent
   },
   {
     path: 'translate',
@@ -27,6 +29,10 @@ const routes: Routes = [
   {
     path: 'translations-management',
     component: TranslationsManagementComponent
+  },
+  {
+    path: 'grammar',
+    component: GrammarComponent
   }
 ];
 
@@ -52,7 +58,9 @@ const routes: Routes = [
     TranslateComponent,
     TranslationsManagementComponent,
     TranslateToolbarComponent,
-    AdjectiveDeklinationComponent
+    AdjectiveDeklinationComponent,
+    GrammarComponent,
+    ArticleComponent
   ]
 })
 export class LearngermanModule {
