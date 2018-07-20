@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDATNKWDLv3yMoYaDUTLh_qLeC_AOC0k5I',
-  authDomain: 'leansoft-266b9.firebaseapp.com',
-  databaseURL: 'https://leansoft-266b9.firebaseio.com',
-  projectId: 'leansoft-266b9',
-  storageBucket: 'leansoft-266b9.appspot.com',
-  messagingSenderId: '651638382911'
+  apiKey: 'AIzaSyBgFPN6ABdch5P5GS_SPMTAxZQ4JMieIb8',
+  authDomain: 'learngermanclub1.firebaseapp.com',
+  databaseURL: 'https://learngermanclub1.firebaseio.com',
+  projectId: 'learngermanclub1',
+  storageBucket: 'learngermanclub1.appspot.com',
+  messagingSenderId: '486264615423'
 };
