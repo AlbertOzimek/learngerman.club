@@ -2,23 +2,30 @@ import {Component, OnInit} from '@angular/core';
 
 
 const DEFINITE_ARTIKLE_DATA: any[] = [
-  {case: 'Nominativ', maskulin: 'der rote Stein', feminin: 'das helle Light', neutral: 'die klare Luft', plural: 'die runden Formen'},
-  {case: 'Akkusativ', maskulin: 'den roten Stein', feminin: 'das helle Light', neutral: 'die klare Luft', plural: 'die runden Formen'},
-  {case: 'Dativ', maskulin: 'dem roten Stein', feminin: 'dem hellen Light', neutral: 'der klaren Luft', plural: 'den runden Formen'},
-  {case: 'Genitiv', maskulin: 'des roten Steines', feminin: 'des hellen Lichtes', neutral: 'der klaren Luft', plural: 'der runden Formen'},
+  {case: 'Nominativ', maskulin: 'der rote Stein', feminin: 'die klare Luft', neutral: 'das helle Light', plural: 'die runden Formen'},
+  {case: 'Akkusativ', maskulin: 'den roten Stein', feminin: 'die klare Luft', neutral: 'das helle Light', plural: 'die runden Formen'},
+  {case: 'Dativ', maskulin: 'dem roten Stein', feminin: 'der klaren Luft', neutral: 'dem hellen Light', plural: 'den runden Formen'},
+  {case: 'Genitiv', maskulin: 'des roten Steines', feminin: 'der klaren Luft', neutral: 'des hellen Lichtes', plural: 'der runden Formen'},
 ];
 
 const INDEFINITE_ARTIKLE_DATA: any[] = [
-  {case: 'Nominativ', maskulin: 'ein roter Stein', feminin: 'ein helles Light', neutral: 'eine klare Luft', plural: 'runde Formen'},
-  {case: 'Akkusativ', maskulin: 'einen roten Stein', feminin: 'ein helles Light', neutral: 'eine klare Luft', plural: 'runde Formen'},
-  {case: 'Dativ', maskulin: 'eineem roten Stein', feminin: 'eindem hellen Light', neutral: 'einer klaren Luft', plural: 'runden Formen'},
+  {case: 'Nominativ', maskulin: 'ein roter Stein', feminin: 'eine klare Luft', neutral: 'ein helles Light', plural: 'runde Formen'},
+  {case: 'Akkusativ', maskulin: 'einen roten Stein', feminin: 'eine klare Luft', neutral: 'ein helles Light', plural: 'runde Formen'},
+  {case: 'Dativ', maskulin: 'eineem roten Stein', feminin: 'einer klaren Luft', neutral: 'eindem hellen Light', plural: 'runden Formen'},
   {
     case: 'Genitiv',
     maskulin: 'eines roten Steines',
-    feminin: 'eines hellen Lichtes',
-    neutral: 'einer klaren Luft',
+    feminin: 'einer klaren Luft',
+    neutral: 'eines hellen Lichtes',
     plural: 'runden Formen'
   },
+];
+
+const OHNE_ARTIKEL: any[] = [
+  {case: 'Nominativ', maskulin: 'roter Stein', feminin: 'klare Luft', neutral: 'helles Light', plural: 'runde Formen'},
+  {case: 'Akkusativ', maskulin: 'roten Stein', feminin: 'klare Luft', neutral: 'helles Light', plural: 'runde Formen'},
+  {case: 'Dativ', maskulin: 'rotem Stein', feminin: 'klarer Luft', neutral: 'hellem Light', plural: 'runden Formen'},
+  {case: 'Genitiv', maskulin: 'roten Steines', feminin: 'klarer Luft', neutral: 'hellen Lichtes', plural: 'runder Formen'},
 ];
 
 export interface ArtikleType {
@@ -37,7 +44,7 @@ export class AdjectiveDeklinationComponent implements OnInit {
   artikleTypes: ArtikleType[] = [
     {value: 'definite', viewValue: 'bestimmten Artikel'},
     {value: 'indefinite', viewValue: 'unbestimmten Artikel'},
-    {value: 'null', viewValue: 'ohne Artikel'}
+    {value: 'withoutArticle', viewValue: 'ohne Artikel'}
   ];
   dataSource = DEFINITE_ARTIKLE_DATA;
   selected;
@@ -56,8 +63,9 @@ export class AdjectiveDeklinationComponent implements OnInit {
       case 'indefinite':
         this.dataSource = INDEFINITE_ARTIKLE_DATA;
         break;
-      default:
-        this.dataSource = DEFINITE_ARTIKLE_DATA;
+      case 'withoutArticle':
+        this.dataSource = OHNE_ARTIKEL;
+        break;
     }
   }
 
