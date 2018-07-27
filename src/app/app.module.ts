@@ -4,7 +4,7 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {LayoutModule} from '@angular/cdk/layout';
-import {MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule} from '@angular/material';
+import {MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule} from '@angular/material';
 import {NavBarMenuComponent} from './nav-bar/nav-bar-menu/nav-bar-menu.component';
 import {NotFoundComponent} from './views/not-found/not-found.component';
 import {routes} from './routes';
@@ -30,8 +30,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FlexLayoutModule,
-    MatCardModule
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
