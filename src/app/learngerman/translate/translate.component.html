@@ -6,7 +6,10 @@
       <textarea #input rows="8" cols="40" class="input" (keyup)="onKeyUp($event.target.value)"></textarea>
     <div fxFlexOffset="20px"></div>
     <div>
-      <div>{{translate$ | async}}</div>
+      <div *ngIf="translate$ | async as translation">
+        <p>{{translation.en}}</p>
+        <p>{{translation.pl}}</p>
+      </div>
     </div>
   </div>
 </div>
