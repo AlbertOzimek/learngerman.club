@@ -21,7 +21,7 @@ interface Translation {
 })
 export class TranslateComponent implements OnInit {
   targetLanguages: Array<string> = ['en', 'pl'];
-  translationArray: Array<Translation>;
+  translationArray = new Array<Translation>();
   userInput$ = new Subject();
 
 
@@ -43,17 +43,15 @@ export class TranslateComponent implements OnInit {
 
 
   translate(inputValue) {
-    for (const targetLanguage of this.targetLanguages) {
+    this.targetLanguages.forEach((targetLanguage) => {
       this.getTranslation(targetLanguage, inputValue);
-    }
+    });
   }
 
   getTranslation(targetLanguage: string, text: string) {
-    this.translationArray = new Array();
     this.translateService.translate(text, targetLanguage)
       .pipe(
-        map((translationObject: TranslationObject) => translationObject.data.translations[0].translatedText),
-        debounceTime(50000)
+        map((translationObject: TranslationObject) => translationObject.data.translations[0].translatedText)
       )
       .subscribe((translatedText: string) => {
         this.translationArray.push({languageKey: targetLanguage, translatedText: translatedText});
