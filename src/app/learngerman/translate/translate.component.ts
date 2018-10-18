@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from './translate.service';
-import {debounceTime, map, mergeMap, switchMap} from 'rxjs/operators';
+import {debounceTime, switchMap} from 'rxjs/operators';
 import {Observable, Subject} from 'rxjs';
+
+
 
 @Component({
   selector: 'learngerman-translate',
@@ -20,16 +22,7 @@ export class TranslateComponent implements OnInit {
     this.translate$ = this.userInput$
       .pipe(
         debounceTime(500),
-        switchMap((userInput: string) => {
-          return this.translateService.translate(userInput, 'en').pipe(
-            mergeMap((en) => {
-              return this.translateService.translate(userInput, 'pl')
-                .pipe(map((pl) => {
-                  return {en, pl};
-              }));
-            })
-          );
-        })
+        switchMap((userInput: string) => this.translateService.translate(userInput))
       );
   }
 
