@@ -15,17 +15,17 @@
     "@google-cloud/storage": "^1.7.0",
     "@google-cloud/translate": "^1.1.0",
     "ffmpeg.js": "^3.1.9001",
-    "firebase-admin": "~5.12.0",
+    "firebase-admin": "^5.12.1",
     "firebase-functions": "^2.0.5",
-    "google-auth-library": "^1.5.0",
+    "google-auth-library": "^1.6.1",
     "googleapis": "^31.0.2",
-    "grpc": "^1.12.2",
-    "npm": "^6.1.0",
-    "request": "^2.87.0"
+    "grpc": "^1.15.1",
+    "npm": "^6.4.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {
-    "tslint": "^5.8.0",
-    "typescript": "^2.5.3"
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
   },
   "private": true
 }
