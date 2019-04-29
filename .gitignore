@@ -13,6 +13,7 @@
 # IDEs and editors
 /.idea/workspace.xml
 /.idea/shelf/
+/.idea/codeStyles/
 .project
 .classpath
 .c9/
