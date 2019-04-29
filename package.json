@@ -13,14 +13,14 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^7.2.14",
-    "@angular/cdk": "^6.0.0",
+    "@angular/cdk": "^7.3.7",
     "@angular/common": "^7.2.14",
     "@angular/compiler": "^7.2.14",
     "@angular/core": "^7.2.14",
     "@angular/flex-layout": "^7.0.0-beta.24",
     "@angular/forms": "^7.2.14",
     "@angular/http": "^7.2.14",
-    "@angular/material": "^6.0.2",
+    "@angular/material": "^7.3.7",
     "@angular/platform-browser": "^7.2.14",
     "@angular/platform-browser-dynamic": "^7.2.14",
     "@angular/router": "^7.2.14",
@@ -29,16 +29,17 @@
     "firebase": "^5.10.1",
     "npm": "^6.9.0",
     "rxjs": "^6.5.1",
+    "typescript": "^3.2.4",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.10.7",
+    "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "^7.3.8",
     "@angular/compiler-cli": "^7.2.14",
     "@angular/language-service": "^7.2.14",
     "@types/jasmine": "^2.8.16",
     "@types/jasminewd2": "^2.0.6",
-    "@types/node": "^10.12.30",
+    "@types/node": "^10.14.6",
     "angular2-template-loader": "^0.6.2",
     "codelyzer": "~4.5.0",
     "firebase-tools": "^5.1.1",
@@ -53,7 +54,6 @@
     "protractor": "^5.4.2",
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
-    "typescript": "^3.1.6",
     "wallaby-webpack": "^3.9.15"
   }
 }
