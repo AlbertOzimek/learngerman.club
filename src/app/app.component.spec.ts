@@ -7,11 +7,6 @@ import {MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatTool
 import {LayoutModule} from '@angular/cdk/layout';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AboutComponent} from './views/about/about.component';
-import {TechnologiesComponent} from './views/technologies/technologies.component';
-import {MethodologyComponent} from './views/methodology/methodology.component';
-import {ProductsComponent} from './views/products/products.component';
-import {HomeComponent} from './views/home/home.component';
 import {NotFoundComponent} from './views/not-found/not-found.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -31,12 +26,7 @@ describe('AppComponent', () => {
         AppComponent,
         NavBarComponent,
         NavBarMenuComponent,
-        HomeComponent,
-        TechnologiesComponent,
-        AboutComponent,
-        NotFoundComponent,
-        MethodologyComponent,
-        ProductsComponent
+        NotFoundComponent
       ],
     }).compileComponents();
   }));
