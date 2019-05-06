@@ -1,3 +1,20 @@
-<learngerman-nav-bar>
+<header>
+  <button (click)="showNav = !showNav" class="material-icons">
+    {{ showNav ? 'close' : 'menu' }}
+  </button>
+  <a routerLink="/" (click)="showNav = showNav ? false : showNav">
+    <h1>{{ title }}</h1>
+  </a>
+</header>
+<nav
+  (click)="showNav = false"
+  [class.showNav]="showNav"
+  [class.hideNav]="showNav === false">
+  <a routerLink="grammar" routerLinkActive="currentSelection">Grammar</a>
+  <a routerLink="translate" routerLinkActive="currentSelection">Translate</a>
+  <a routerLink="contact" routerLinkActive="currentSelection">Contact</a>
+</nav>
+<main>
   <router-outlet></router-outlet>
-</learngerman-nav-bar>
+</main>
+<footer>Footer</footer>
