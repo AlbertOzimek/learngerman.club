@@ -1,3 +1,5 @@
+$spacing: 15px;
+
 :host {
   display: grid;
   grid-gap: 0;
@@ -20,7 +22,7 @@ header {
     / auto       minmax(0, 1fr);
 
   background: #008080;
-  padding: 15px;
+  padding: $spacing;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.33);
   z-index: 1;
 
@@ -32,7 +34,7 @@ header {
     color: white;
     text-align: left;
     margin: 0;
-    margin-right: 15px;
+    margin-right: $spacing;
     padding: 0;
   }
 
@@ -74,6 +76,7 @@ nav {
 main {
   grid-area: main;
   overflow: auto;
+  padding: $spacing;
 }
 
 footer {
