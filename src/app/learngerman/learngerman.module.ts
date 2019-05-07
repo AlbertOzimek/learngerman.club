@@ -8,6 +8,7 @@ import {TranslationsManagementComponent} from './translate/translations-manageme
 import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {FormsModule} from '@angular/forms';
+import {MatButtonModule, MatCardModule, MatIconModule, MatSelectModule, MatTableModule, MatToolbarModule} from '@angular/material';
 import { TranslateToolbarComponent } from './translate/translate-toolbar/translate-toolbar.component';
 import {HttpClientModule} from '@angular/common/http';
 import {firebaseConfig} from './firebase-config';
@@ -42,6 +43,12 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTableModule,
+    MatSelectModule,
+    MatCardModule,
+    MatButtonModule,
     HttpClientModule,
     FlexLayoutModule,
     FormsModule
