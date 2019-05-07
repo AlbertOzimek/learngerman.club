@@ -14,7 +14,7 @@
   <a routerLink="translate" routerLinkActive="currentSelection">Translate</a>
   <a routerLink="contact" routerLinkActive="currentSelection">Contact</a>
 </nav>
-<main>
+<main (click)="showNav = false">
   <router-outlet></router-outlet>
 </main>
 <footer>Footer</footer>
